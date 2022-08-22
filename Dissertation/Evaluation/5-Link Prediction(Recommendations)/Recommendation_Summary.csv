@@ -1,0 +1,21 @@
+Recommendation Type,Researcher1,Researcher2,Intersection,Entity,Researcher1-Entity-Weight,Researcher2-Entity-Weight,Entity-Network-Weight,Research Collaboration Probability
+Secondary Recommendation,"OXLEY,J","JAFFE,A",Coauthor,"SMITH,D",2,4,291,0.504334187
+Secondary Recommendation,"OXLEY,J","JAFFE,A",Coauthor,"WARD,C",2,2,287,0.504334187
+Secondary Recommendation,"OXLEY,J","JAFFE,A",Coauthor,"ELLIOTT,E",2,4,291,0.504334187
+Secondary Recommendation,"OXLEY,J","JAFFE,A",Coauthor,"MARTIN,A",2,8,311,0.504334187
+Secondary Recommendation,"OXLEY,J","JAFFE,A",Coauthor,"WILSON,A",2,2,288,0.504334187
+Secondary Recommendation,"OXLEY,J","JAFFE,A",Coauthor,"JONES,A",2,2,283,0.504334187
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,Recommendation Type:,Secondary Recommendation,,,,,
+,,Primary Researcher:,"JAFFE, A",,,,,
+,,Secondary Researcher:,"OXLEY,J",,,,,
+,,Research Collaboration Probability:,50.43%,,,,,
+,,Intersection,Entity,Researcher1-Entity-Weight,Researcher2-Entity-Weight,Entity-Network-Weight,,
+,,Coauthor,"SMITH,D",2,4,291,,
+,,Coauthor,"WARD,C",2,2,287,,
+,,Coauthor,"ELLIOTT,E",2,4,291,,
+,,Coauthor,"MARTIN,A",2,8,311,,
+,,Coauthor,"WILSON,A",2,2,288,,
+,,Coauthor,"JONES,A",2,2,283,,

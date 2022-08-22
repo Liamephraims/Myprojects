@@ -1,0 +1,10 @@
+Name,Status,Main Count,Reference Count,Cluster Count,Final_count,Unsupervised Clustering Method,Read_Count,Read_status
+"AGAR,M",Disambiguated (1 cluster),192,206,1,192,DBSCAN,192,TRUE
+"ANAZODO,A",Disambiguated (1 cluster),55,87,1,58,DBSCAN,58,TRUE
+"BARTON,M",Disambiguated (1 cluster),147,281,1,167,DBSCAN,167,TRUE
+"BUTLER,T",Disambiguated (1 cluster),27,28,1,27,DBSCAN,27,TRUE
+"DELANEY,G",Disambiguated (1 cluster),162,248,1,188,DBSCAN,188,TRUE
+"GREBELY,J",Disambiguated (1 cluster),38,266,1,38,DBSCAN,38,TRUE
+"JAFFE,A",Disambiguated (1 cluster),138,219,1,155,DBSCAN,155,TRUE
+"ROBERTS,T",Disambiguated (1 cluster),50,72,1,52,DBSCAN,52,TRUE
+"VITTORIO,O",Disambiguated (1 cluster),68,206,1,69,DBSCAN,69,TRUE
