@@ -105,7 +105,7 @@ def check_logic_wrapper(check_function):
 
 # Defining Stage 1 Checks:
 
-# ***** - 1. Define your check function in the desired stage area
+# ***** - 1. Define your check function in the desired stage area - ensuring to place it directly underneith the @check_logic_wrapper decorator to wrap it as a check object
 
 @check_logic_wrapper
 def check1_1(source, target, sourcedbs, targetdbs, region, uk_connection, regional_connection):
