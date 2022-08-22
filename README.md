@@ -4,7 +4,7 @@ This repo provides a folder for each of my personal projects.
 
 Data Validation Toolkit: A wheel data validation package for setting up, maintaining and implementing comprehensive data quality checks across a pipeline from source extraction, transformation and loading or delivery within a dashboard, such as PowerBI hosted within AWS cloud. See example_of_data_validation_toolkit_for_client.ipynb for how it would be used, and Data_Validation_Toolkit/functions.py to see the functionality and structure of the package and its components.
 
-Dissertation: My dissertation paper for creating a proof of concept recommendation tool for research collaboration recommendations within the research environment.
+Dissertation: My dissertation paper and accompanying code in the evaluation folder, for creating a six-step proof of concept recommendation tool for research collaboration recommendations within the research environment.
 
 Machine Learning: Prediction of Heart Disease Analysis
 
