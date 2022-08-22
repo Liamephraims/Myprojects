@@ -6,6 +6,8 @@ Data Validation Toolkit: A wheel data validation package for settnig up and impl
 
 Dissertation: My dissertation paper for creating a proof of concept recommendation tool for research collaboration recommendations within the research environment.
 
+Machine Learning: Prediction of Heart Disease Analysis
+
 NYC Taxi Dashboard: A Dash dashboard project I undertook in creating a visualisation dashboard of the NYC taxis - also leveraging folium maps - see screenshot or html of dash for example
 
-ETP KPI Analysis: The output of a statistical analysis project I undertook at Royal North Shore Hospital, exploring the most influential factors impacting our ED KPI, emergency treatment performance.
+ETP KPI Analysis: The report output of a statistical analysis project I undertook at Royal North Shore Hospital, exploring the most influential factors impacting our ED KPI, emergency treatment performance.
