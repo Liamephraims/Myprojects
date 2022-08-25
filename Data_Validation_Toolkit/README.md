@@ -15,9 +15,10 @@ Each new version (change in functions etc) to bring this into AWS jobs, we will 
 For this:
 
 Just run the new_version_wheel_script.ipynb, and the below steps will be completed.
-Save these changes, and commit to this branch.
-Once pulling these into main, the github actions will then push up the latest version of the dist/wheels file for version  0.36.01
-so be careful not to change the version name, unless you change the references to this name in the github action & in the validation scripts for each client
+
+Save these changes, and commit to main branch.
+
+Once pulling these into main, its recommended using github actions or something similar to then orchestrate an automatic push of the latest version of the dist/wheels file for version  0.36.01 from main and into the s3 bucket holding the wheel version of the data validation toolkit, which will then be used by Glue jobs.
 
 I recommend just running the new_version_wheel_script.ipynb file as above, rather than doing manually
 
