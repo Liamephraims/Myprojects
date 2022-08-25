@@ -110,7 +110,7 @@ def check_logic_wrapper(check_function):
 # Defining Stage 1 Checks:
 
 # ***** - 1. Define your check function in the desired stage area - ensuring to place it directly underneith the @check_logic_wrapper decorator to wrap it as a check object. 
-#            Note: You're checks input can be any input parameters you like from the data validation script, although the return value will need to be in the form of tuple,
+#            Note: Your checks input can be any input parameters you like from the data validation script, although the return value will need to be in the form of tuple,
 #            containing two items, (first item=a true/false bool for the check, second item=the desired string output if the check fails to be printed to slack) 
 
 @check_logic_wrapper
@@ -600,7 +600,7 @@ class stage_1:
         self.regional_connectors = dict()
         # CUSTOM PARAMETER LISTS for holding custom parameters later on when running in prep_stage_check_parameters - 
 
-        # ***** - 5. Add the new check below, to initalise a list for it when passing through the custom parameters provided in the data validation script
+        # ***** - 2. Add the new check below, to initalise a list for it when passing through the custom parameters provided in the data validation script
 ##################################################################################################### ADD ANY NEW CHECK HERE AS check_name: list() ######################################################################################
         # Defines lists for each check, where custom check parameters will be stored
         self.check_custom_parameters = { # Stage 1 checks
@@ -614,7 +614,7 @@ class stage_1:
         # MANDATORY DEFAULT PARAMETERS (Check_object, check_name, client
         # OPTIONAL DEFAULT PARAMETERS - e.g. client name + dashboard_tables, athena connection object (though likely needed for any check running athena commands) - both being check specific
         # A dictionary containing the default parameters for each check:
-        # ***** - 6. Add the default parameters required in your check, including any optional ones you can include here rather than having to include as a parameter provided by the user.
+        # ***** - 3. Add the default parameters required in your check, including any optional ones you can include here rather than having to include as a parameter provided by the user.
         #            Mandatory default parameters are provided as a dictionary with the name of your check, and key-value parameters are;
         #                   i.   check_object: the check class object
         #                   ii.  check_name: the name of the check again ( this really should just come from the name of the dictionary key - an example of some weaknesses in code structure )
@@ -747,12 +747,12 @@ class stage_2(stage_1):
     
     # Inherits  def run_stage_checks(self) and def __init__(self, name, client, check_set) from Stage_1 parent class
     def run_stage_setup(self):
-        # ***** - 7. Depending on the stage you want to add the check to (for example adding to stage 2), then you will add the input list object as a parameter below in the stage_parameters
+        # ***** - 4. Depending on the stage you want to add the check to (for example adding to stage 2), then you will add the input list object as a parameter below in the stage_parameters
         # Firstly, check that all neccessary parameters have been inputted:
         stage_parameters = {"source_target_input_list", "definition_check_list", "track_check_list"}
         assert(all(x in stage_parameters for x in self.kwarg_parameters.keys()),
                         f"For stage {self.name} one of set-up parameters is missing: {stage_parameters} - note all parameters need to be keyword parameters")
-        # ***** - 8. You will then need to create the variable with same name below (note this could be removed and self.kwarg_parameters["list object name"]) could be used instead - optional to remove this step
+        # ***** - 5. You will then need to create the variable with same name below (note this could be removed and self.kwarg_parameters["list object name"]) could be used instead - optional to remove this step
         # Collecting stage 2 set-up custom parameter dictionaries:
         source_target_input_list = self.kwarg_parameters["source_target_input_list"]
         definition_check_list = self.kwarg_parameters["definition_check_list"]
@@ -768,7 +768,7 @@ class stage_2(stage_1):
         
         # Store set-up custom check parameter object for 2.5:
         self.stage_setup_outputs.append(["2.5", track_check_list]) 
-# ***** - 9. Finally, you will need to create some unnesting code (if not at level of list with dictionaries of key-value parameters appended), and then add this to the self.stage_setup_outputs attribute so the prep_check_parameters function can access them
+# ***** - 6. Finally, you will need to create some unnesting code (if not at level of list with dictionaries of key-value parameters appended), and then add this to the self.stage_setup_outputs attribute so the prep_check_parameters function can access them
 
 ##################################################################### ADD ANY FUTURE CHECKS INPUT LISTS BELOW FOR STAGE 2 ###############################################
 # note: You will need to ensure these are extracted to the level of a list, containing a dictionary of key-value parameters for the check - each dictionary being one instance of a check to be run
