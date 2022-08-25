@@ -21,28 +21,6 @@ so be careful not to change the version name, unless you change the references t
 
 I recommend just running the new_version_wheel_script.ipynb file as above, rather than doing manually
 
-OR to do it manually, follow these steps:
-
-1. Recreate the wheel file for package in dist folder. 
-
-2. Run pip install wheel (if not already installed-this will allow you to run python setup.py bdist_wheel to create the wheel file for the package)
-
-3. Delete old wheel files/folders (dash_validation_toolkit.egg-info, build, dist)
-
-4. Run python setup.py bdist_wheel - this will recreate dash_validation_toolkit.egg-info, build, dist folders, with package wheel file in dist folder note: the name will have changed if you changed the version index for this file in setup.py for the version section (e.g. dash_validation_toolkit-0.23.1-py3-none-any.whl -> BPM_dash_validation_toolkit-0.24 1-py3-none-any.whl), so later steps this naming of file will need to be updated in github actions if version was changed - e.g. referencing file from s3 bucket for github actions (if not then skip this step) - in assigning this package to a glue job. However, I think we just leave the version at 0.36.01 from now on so we dont need to change anything in terms of automation.
-
-5. Add this new wheel file in the dist folder to our S3 Bucket which is pointed to by our glue jobs in github actions (add this as future github actions job)
-
-6. Change the name of the BPM validation toolkit wheel file name in the github action named external pushes, if the version number was changed in setup.py.
-
-7. BPM_dash_validation_toolkit is a Python package for our bpm analytics team. It provides functionality to undertake checks for stage one (region source to union), stage two (union to base) and stage three (base to dashboard) checks, and allows us to maintain our validation code for each client on more simply validation template scripts which can easily be added to when needed. If you want to add a new check, add it to the functions.py script, and init/imports script and it can be used (also increment the version of the package in settings 'setup' file. 
-
-For use in Juypter Notebook:
-
-Use the package manager pip to install Toolbox like below. Rerun this command to check for and install updates (will check versioning so make sure to update this when editing).
-
-Run # !pip install ./dash_validation_toolkit/dist/dash_validation_toolkit-0.27.1-py3-none-any.whl for installing the package and using in our jupyter notebook. Note: you will have to be in your analytics github repo/directory for this to work and the data validation/eu-west-2/jupyter folder for this to work.
-
 Functions available to import: 
 
 
