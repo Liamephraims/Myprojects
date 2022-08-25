@@ -6,6 +6,8 @@ import requests
 import json
 import inspect
 
+# To add new checks or stages search by ***** and follow the steps required.
+
 # Improvement once completed for all three stages are:
 
 # > All code is now in one file - easier for debugging - also far smaller than previous verison
@@ -105,7 +107,9 @@ def check_logic_wrapper(check_function):
 
 # Defining Stage 1 Checks:
 
-# ***** - 1. Define your check function in the desired stage area - ensuring to place it directly underneith the @check_logic_wrapper decorator to wrap it as a check object
+# ***** - 1. Define your check function in the desired stage area - ensuring to place it directly underneith the @check_logic_wrapper decorator to wrap it as a check object. 
+#            Note: You're checks input can be any input parameters you like from the data validation script, although the return value will need to be in the form of tuple,
+#            containing two items, (first item=a true/false bool for the check, second item=the desired string output if the check fails to be printed to slack) 
 
 @check_logic_wrapper
 def check1_1(source, target, sourcedbs, targetdbs, region, uk_connection, regional_connection):
