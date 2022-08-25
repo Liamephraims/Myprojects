@@ -25,6 +25,8 @@ import inspect
 
 # Later plan to use on my project AWS/GCP infrastructure for example
 
+# > add a pytest module for unit testing of check functions
+
 #create client class and methods
 class client:
     def __init__(self, client, regions, core_databases, zephyr_databases, slack_webhook, connection, send_to_slack=True):
