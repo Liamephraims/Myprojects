@@ -1,8 +1,10 @@
 Dash Validation Toolkit
 
-This is a validation package for a ETL pipeline on AWS, for ensuring data quality along a data pipeline from production to dashboard.
+This is a validation package for an ETL pipeline on AWS, for ensuring data quality along a data pipeline from production to dashboard. It consists of running check functions (e.g. primary key constraint or equal row counts) for a validation stage of checks for a client between two database transformation steps in their pipeline, with any failures being stored and outputted at the end of the data validation script, and outputted to the analytics team slack, prior to them refreshing a dashboard.
 
-It consists of running checks functions for a stage of checks for a client, with any failures being stored and outputted at end of data validation script, and outputted to analytics team slack - see example_of_data_validation_client jupyter script.
+> See example_of_data_validation_client jupyter script for an example of how checks/the data validation process would be set up, with failed checks for each client being sent to analysts slack channel.
+
+> See data_validation_toolkit/functions.py to see the key classes, decorators and functions for the data validation process, and how new validation stages and checks could be added.
 
 Stages are implemented as class objects, which hold the parameters and wrapped function object for check functions. Each check function is provided as a function below a decorator function, which takes the provided check function and turns it into a check object for storing of failures and parameters. This allows reduced code and the passing of parameters and failures along from data validation script to stages to checks and to the client for outputting at the end.
 
